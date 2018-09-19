@@ -1,12 +1,15 @@
-1 void io_hlt(void);
-  2 void write_mem8(int addr, int data);
-  3
-  4 void HariMain(void){
-  5     int i;
-  6     for(i=0xa0000;i<=0xaffff){
-  7         write_mem8(i,15);
-  8     }
-  9     for(;;){
- 10         io_hlt();
- 11     }
- 12 }
+/* 告诉C编译器，有一个函数在别的文件里 */
+
+void io_hlt(void);
+
+/* 是函数声明却不用{}，而用;，这表示的意思是：
+	函数在别的文件中，你自己找一下 */
+
+void HariMain(void)
+{
+
+fin:
+	io_hlt(); /* 执行naskfunc.nas中的_io_hlt函数 */
+	goto fin;
+
+}

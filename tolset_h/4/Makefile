@@ -82,4 +82,4 @@ clean :
 
 src_only :
 	$(MAKE) clean
--$(DEL) haribote.img
+	-$(DEL) haribote.img

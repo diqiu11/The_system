@@ -18,4 +18,4 @@
 
 _io_hlt:	; void io_hlt(void);
 		HLT
-RET
+		RET

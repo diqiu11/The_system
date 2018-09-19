@@ -16,7 +16,7 @@ DEL      = del
 # 默认动作
 
 default :
-	$(MAKE) haribote.img
+	$(MAKE) img
 
 # 镜像文件生成
 
@@ -82,4 +82,4 @@ clean :
 
 src_only :
 	$(MAKE) clean
--$(DEL) haribote.img
+	-$(DEL) haribote.img
